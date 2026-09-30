@@ -1,0 +1,98 @@
+/* ===========================
+   Category Buttons
+=========================== */
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.category-buttons button {
+    background: var(--white);
+    color: var(--navy);
+    border: 2px solid var(--mustard);
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.category-buttons button:hover {
+    background: var(--mustard);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.category-buttons button.active {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--navy);
+}
+
+/* ===========================
+   Filter Animation
+=========================== */
+
+.fade-in {
+    animation: fadeIn .4s ease;
+}
+
+.fade-out {
+    animation: fadeOut .25s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+}
+
+/* ===========================
+   Product Card Hover
+=========================== */
+
+.product-card {
+    transition: all .35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px) {
+    .category-buttons {
+        gap: 10px;
+    }
+
+    .category-buttons button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
